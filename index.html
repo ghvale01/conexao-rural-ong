@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conexão Rural — Início</title>
+  <meta name="description" content="Conexão Rural: inclusão digital em áreas rurais. Educação, saúde e agricultura." />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Conexão Rural">
+        <img src="assets/img/logo.png" alt="Logo Conexão Rural" width="140">
+      </a>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="menu">☰</button>
+        <ul id="menu" class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li class="has-sub">
+            <a href="projetos.html">Projetos ▾</a>
+            <ul class="submenu" aria-label="submenu projetos">
+              <li><a href="projetos.html#educacao">Educação</a></li>
+              <li><a href="projetos.html#saude">Saúde</a></li>
+              <li><a href="projetos.html#conectividade">Conectividade</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Conexão Rural</h1>
+      <p class="lead">Inclusão digital para comunidades rurais — educação, saúde e orientações agrícolas, mesmo sem conexão contínua.</p>
+      <div class="hero-actions">
+        <a class="btn" href="projetos.html">Conheça projetos</a>
+        <a class="btn outline" href="cadastro.html">Cadastre-se</a>
+      </div>
+      <img class="hero-img" src="assets/img/hero.jpg" alt="Comunidade rural com tecnologia">
+    </section>
+
+    <section aria-labelledby="mission" class="mission">
+      <h2 id="mission">Nossa missão</h2>
+      <p>Capacitar comunidades rurais com ferramentas digitais leves e inclusivas, promovendo educação, informação e sustentabilidade.</p>
+    </section>
+
+    <section aria-labelledby="features" class="features">
+      <h2 id="features">O que oferecemos</h2>
+      <div class="grid-3">
+        <article class="card" aria-labelledby="f1">
+          <h3 id="f1">Conteúdo offline</h3>
+          <p>Aulas e materiais que funcionam sem conexão e sincronizam quando houver rede.</p>
+        </article>
+
+        <article class="card" aria-labelledby="f2">
+          <h3 id="f2">Portal comunitário</h3>
+          <p>Avisos locais, oportunidades e troca de informações entre vizinhanças.</p>
+        </article>
+
+        <article class="card" aria-labelledby="f3">
+          <h3 id="f3">Suporte à agricultura</h3>
+          <p>Orientações práticas e calendários sazonais para pequenos produtores.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <address>
+        <strong>Conexão Rural</strong><br>
+        Rua Exemplo, 123 — Município Rural<br>
+        <a href="mailto:contato@conexaorural.org">contato@conexaorural.org</a>
+      </address>
+      <p class="copyright">© <span id="year"></span> Conexão Rural</p>
+    </div>
+  </footer>
+
+  <script src="js/masks.js"></script>
+  <script src="js/form.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // mobile menu toggle
+    const hb = document.getElementById('hamburger'), menu = document.getElementById('menu');
+    hb.addEventListener('click', () => {
+      const expanded = hb.getAttribute('aria-expanded') === 'true';
+      hb.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

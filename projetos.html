@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conexão Rural — Projetos</title>
+  <meta name="description" content="Projetos da Conexão Rural: educação, saúde e conectividade." />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- header: copie o mesmo do index.html -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><img src="assets/img/logo.png" alt="Logo" width="140"></a>
+      <nav class="main-nav" aria-label="menu principal">
+        <button id="hamburger2" class="hamburger" aria-expanded="false" aria-controls="menu2">☰</button>
+        <ul id="menu2" class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li class="has-sub"><a href="projetos.html">Projetos ▾</a>
+            <ul class="submenu"><li><a href="#educacao">Educação</a></li><li><a href="#saude">Saúde</a></li></ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <section class="hero small" aria-labelledby="proj-title">
+      <h1 id="proj-title">Projetos</h1>
+      <p>Conheça iniciativas que transformam comunidades.</p>
+    </section>
+
+    <section id="educacao" class="projects grid-3">
+      <article class="card">
+        <img src="assets/img/projetos/educacao.jpg" alt="Educação">
+        <h3>Educação Móvel</h3>
+        <p>Conteúdos offline para escolas rurais.</p>
+      </article>
+
+      <article class="card">
+        <img src="assets/img/projetos/saude.jpg" alt="Saúde">
+        <h3>Saúde e Bem-estar</h3>
+        <p>Informações básicas de saúde e campanhas.</p>
+      </article>
+
+      <article class="card">
+        <img src="assets/img/projetos/conectividade.jpg" alt="Conectividade">
+        <h3>Conectividade Rural</h3>
+        <p>Redes comunitárias e pontos de sincronização.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>© <span id="year2"></span> Conexão Rural</p></div></footer>
+
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+  <script src="js/masks.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
